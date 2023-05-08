@@ -6,6 +6,18 @@ mainClassName = "org.tvrenamer.controller.Launcher"
 // Only for MacOS
 applicationDefaultJvmArgs = ["-XstartOnFirstThread"]
 
+plugins {
+  id "org.sonarqube" version "3.5.0.2730"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "and333r_tvrenamer"
+    property "sonar.organization", "and333r"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
+
 repositories {
     mavenCentral()
 }
